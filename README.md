@@ -74,9 +74,3 @@ make          # Build the executable (outputs 'tema1')
 ./tema1       # Run with custom input files
 ./checker.sh  # Check with predefined input files
 ```
-
-## Course Info
-
-📚 **Data Structures & Algorithms (SDA)** — 2024  
-🧠 **Task Score:** 100/100
-🔍 **Valgrind Bonus:** 20/20
