@@ -1,0 +1,66 @@
+MARGARIT ANDREI - 315CD - Descriere pentru rezolvare Tema1 SDA:
+Pe checkerul local am obtinut 100 de puncte pentru teste,
+respectiv 20 de puncte la testarea pe valgrind.
+
+
+Pentru structurile de date am implementat tipurile de date:
+  -page, ce contine datele unei pagini, de unde reies tipurile 
+  stacknode si stack folosite pentru stivele backwardStack si
+  forwardStack continute intr-un tab;
+
+  -tab, ce contine datele unui tab, de unde reies tipurile
+  listNode si tabsList folosite pentru lista dublu inlantuita
+  circulara cu santinela;
+
+  -browser, ce contine o adresa catre tabul curent, lista
+  de taburi si maxtabid care este folosit pentru a determina
+  id-ul unui tab nou creat;
+
+  -pages, ce contine un vector cu paginile date, alocat dinamic.
+
+Am implementat functiile generice pentru stiva, respectiv pentru
+lista de taburi am mai adaugat datele generice pentru pagina
+curenta la crearea tabului
+
+Rezolvarea cerintelor:
+  -NEW_TAB: functia create_newtab face operatiile clasice pentru
+  crearea unui nod nou intr-o lista si muta adresa tabului curent
+  catre tabul nou;
+
+  -CLOSE: functia close_tab verifica daca tabul curent este
+  chiar primul tab, apoi sterge tab-ul curent din lista si muta
+  adresa tabului curent catre tabul precedent;
+
+  -OPEN <ID>: functia open_tab cauta in lista nodul ce contine
+  tabul cu id-ul dat, daca acesta exista si muta adresa tabului
+  curent din browser catre tabul gasit;
+
+  -NEXT: functia next_tab cauta tab-ul curent si apoi muta
+  adresa tabului curent catre tabul urmator;
+
+  -PREV: functia prev_tab cauta tab-ul curent si apoi muta
+  adresa tabului curent catre tabul precedent;
+
+  -PAGE <ID>: functia open_page cauta id-ul dat in vectorul
+  de pagini si daca exista,schimba pagina curenta cu cea actuala;
+
+  -BACKWARD: functia backward verifica daca stiva backwardStack
+  este goala, iar daca nu, muta pagina curenta catre pagina
+  din varful stivei si adauga pagina curenta in stiva
+  forwardStack;
+
+  -FORWARD: functia forward verifica daca stiva forwardStack
+  este goala, iar daca nu, muta pagina curenta catre pagina
+  din varful stivei si adauga pagina curenta in stiva
+  backwardStack;
+
+  -PRINT: functia afisare afiseaza id-urile tab-urilor, respectiv
+  descrierea paginii curente;
+
+  -PRINT_HISTORY: functia afisare_pagini afiseaza url-urile
+  paginilor din stivele backwardStack si forwardStack ale tab-ului
+  cu id-ul dat, daca acesta exista, in ordinea in care au fost
+  accesate;
+
+  -BONUS - VALGRIND: functiile freeTab, freeList si freeBrowser
+  elibereaza memoria.
