@@ -77,6 +77,6 @@ make          # Build the executable (outputs 'tema1')
 
 ## Course Info
 
-📚 Data Structures & Algorithms (SDA) — 2025
-🧠 Task Score: 100/100
-🔍 Valgrind Bonus: 20/20
+📚 **Data Structures & Algorithms (SDA)** — 2024  
+🧠 **Task Score:** 100/100
+🔍 **Valgrind Bonus:** 20/20
